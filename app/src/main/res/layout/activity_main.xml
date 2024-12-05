@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        app:titleTextColor="@color/white"
+        app:title="Bac Calculator"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight (lbs):"/>
+        <EditText
+            android:id="@+id/edtweight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="  your weight in lbs"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender:"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radiogrp"
+            android:orientation="horizontal">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/rdfemale"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:id="@+id/rdmale"/>
+        </RadioGroup>
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnsetweight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Set Weight"
+        android:textColor="@color/black"
+        android:backgroundTint="#C1BDBD"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight:"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="  your weight "
+            android:id="@+id/txtweight"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Drink Size:"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1oz"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/btn1oz"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content"
+            android:text="5oz"
+            android:id="@+id/btn5oz"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="12oz"
+            android:id="@+id/btn12oz"/>
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alcohol %"/>
+     <SeekBar
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:max="30"
+         android:id="@+id/seekbar"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:id="@+id/textseek"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_weight="1"
+            android:text="Reset"
+            android:textColor="@color/black"
+            android:backgroundTint="#C1BDBD"
+            android:id="@+id/btnreset"/>
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_weight="1"
+            android:text="Add Drink"
+            android:textColor="@color/black"
+            android:id="@+id/btnadddrink"
+            android:backgroundTint="#C1BDBD"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="# DRINKS "
+        android:textSize="20dp"
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="No.of Drinks"
+            android:id="@+id/txtdrink"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BAC Levels : "
+            android:textSize="30dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="level"
+            android:textSize="30dp"
+            android:id="@+id/txtlvl"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Status"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#73DE16"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:hint="Your are safe"
+            android:id="@+id/txtstatus"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
